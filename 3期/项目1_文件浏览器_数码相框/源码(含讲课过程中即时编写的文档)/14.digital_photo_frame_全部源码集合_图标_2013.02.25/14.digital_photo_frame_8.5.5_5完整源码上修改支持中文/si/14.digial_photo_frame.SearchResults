@@ -1,0 +1,20 @@
+---- manual Matches (6 in 3 files) ----
+Main_page.c (page):							Page("manual")->Run(&tPageParams);
+Manual_page.c (page):	ptVideoMem = GetVideoMem(ID("manual"), 1);
+Manual_page.c (page):		DBG_PRINTF("can't get video mem for manual page!\n");
+Manual_page.c (page):    tPageParams.iPageID = ID("manual");
+Manual_page.c (page):	.name          = "manual",
+---- strCurPictureFile Matches (11 in 5 files) ----
+Auto_page.c (page):    if (ptParentPageParams->strCurPictureFile[0] != '\0')
+Auto_page.c (page):        strcpy(g_tPageCfg.strSeletedDir, ptParentPageParams->strCurPictureFile);
+Browse_page.c (page):                            snprintf(tPageParams.strCurPictureFile, 256, "%s/%s", g_strCurDir, g_aptDirContents[iDirFileContentIndex]->strName);
+Browse_page.c (page):                            tPageParams.strCurPictureFile[255] = '\0';
+Browse_page.c (page):                            if (isPictureFileSupported(tPageParams.strCurPictureFile))
+Main_page.c (page):                            tPageParams.strCurPictureFile[0] = '\0';
+Manual_page.c (page):    strcpy(strFullPathName, ptParentPageParams->strCurPictureFile);
+Manual_page.c (page):    strcpy(strDirName, ptParentPageParams->strCurPictureFile);
+Manual_page.c (page):                                strcpy(tPageParams.strCurPictureFile, strFullPathName);
+Manual_page.c (page):                                ShowManualPage(&g_tManualPageMenuIconsLayout, tPageParams.strCurPictureFile);
+Page_manager.h (include):    char strCurPictureFile[256];  /* 要处理的第1个图片文件 */
+---- sleep Matches (1 in 1 files) ----
+Auto_page.c (page):            sleep(g_tPageCfg.iIntervalSecond);       /* 先用休眠来代替 */

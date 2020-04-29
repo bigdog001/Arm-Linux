@@ -1,0 +1,31 @@
+
+建议使用Araxis Merge比较相邻的文件夹
+
+
+运行方法：
+1. 把"icons"文件夹放到开发板的"/etc/digitpic"目录下
+
+2. 安装触摸屏驱动
+insmod s3c_ts.ko        (如果内核里已经有触摸屏驱动，则不用自己安装)
+
+3. 设置环境变量
+export TSLIB_TSDEVICE=/dev/event0                        (触摸屏对应的设备)
+export TSLIB_CALIBFILE=/etc/pointercal
+export TSLIB_CONFFILE=/etc/ts.conf
+export TSLIB_PLUGINDIR=/lib/ts
+export TSLIB_CONSOLEDEVICE=none
+export TSLIB_FBDEVICE=/dev/fb0
+
+4. 如果没较准过触摸屏，运行：
+ts_calibrate
+
+5. 把1.jpg放到开发板根目录下(程序里就是显示/1.jpg)
+
+4. 运行程序
+./digitpic ./MSYH.TTF 
+
+
+操作：
+在LCD上点"浏览模式"，点击某个JPG文件，即可显示图片，还可以点击"上一张"、"下一张"
+
+   

@@ -1,0 +1,27 @@
+---- GetDispResolution Matches (5 in 4 files) ----
+Disp_manager.c (display):int GetDispResolution(int *piXres, int *piYres, int *piBpp)
+Disp_manager.c (display):	GetDispResolution();
+Disp_manager.h (include):int GetDispResolution(int *piXres, int *piYres);
+Draw.h (include):int GetDispResolution(int *piXres, int *piYres);
+Touchscreen.c (input):	if (GetDispResolution(&giXres, &giYres))
+---- GetDispResolution Matches (7 in 6 files) ----
+Disp_manager.c (display):int GetDispResolution(int *piXres, int *piYres, int *piBpp)
+Disp_manager.c (display):	GetDispResolution(&iXres, &iYres, &iBpp);
+Disp_manager.h (include):int GetDispResolution(int *piXres, int *piYres, int *piBpp);
+Draw.h (include):int GetDispResolution(int *piXres, int *piYres);
+Main_page.c (page):		GetDispResolution(&iXres, &iYres, &iBpp);
+Render.c (render):	GetDispResolution(&iXres, &iYres, &iBpp);
+Touchscreen.c (input):	if (GetDispResolution(&giXres, &giYres, &iBpp))
+---- StdoutInit Matches (2 in 2 files) ----
+Debug_manager.c (debug):	iError = StdoutInit();
+Stdout.c (debug):int StdoutInit(void)
+---- InvertButton Matches (3 in 1 files) ----
+Render.c (render):static InvertButton(PT_Layout ptLayout)
+Render.c (render):	InvertButton(ptLayout);
+Render.c (render):	InvertButton(ptLayout);
+---- GetPixelDatasForIcon Matches (3 in 2 files) ----
+Main_page.c (page):			iError = GetPixelDatasForIcon(atLayout->strIconName, &tOriginIconPixelDatas);
+Main_page.c (page):				DBG_PRINTF("GetPixelDatasForIcon error!\n");
+Render.c (render):int GetPixelDatasForIcon(char *strFileName, PT_PixelDatas ptPixelDatas)
+---- can't get video Matches (1 in 1 files) ----
+Main_page.c (page):		DBG_PRINTF("can't get video mem for main page!\n");
